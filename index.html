@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEROTRIP - Elevate Your Travel Experience</title>
+    <!-- Menggunakan Font Google yang Elegan dan Simpel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #F9F6F0; /* Cream */
+            color: #111111; /* Hitam */
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 0;
+        }
+
+        /* PALETTE WARNA KUNCI:
+           Navy: #0A192F
+           Dark Gold: #B89047
+           Rose Gold Tua: #B76E79
+           Cream: #F9F6F0
+           Hitam: #111111
+           Putih: #FFFFFF
+        */
+
+        /* HEADER & NAVBAR */
+        header {
+            background-color: #0A192F; /* Navy */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            border-bottom: 2px solid #B89047; /* Dark Gold */
+        }
+
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            border-radius: 5px;
+        }
+
+        .brand-name {
+            color: #FFFFFF;
+            font-size: 24px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #FFFFFF;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #B89047; /* Dark Gold */
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background-image: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.7)), url('https://images.unsplash.com/photo-1604999333679-b86d54738315?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+            letter-spacing: 4px;
+            color: #FFFFFF;
+        }
+
+        .hero p {
+            font-size: 24px;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: #B89047; /* Dark Gold */
+            letter-spacing: 1px;
+        }
+
+        /* SECTION TILES */
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #0A192F;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background-color: #B89047;
+        }
+
+        /* ABOUT & STORY */
+        .about-story-bg {
+            background-color: #FFFFFF;
+        }
+
+        .about-content {
+            margin-bottom: 50px;
+        }
+
+        .text-p {
+            margin-bottom: 20px;
+            text-align: justify;
+            color: #333333;
+            font-size: 15px;
+        }
+
+        /* WARM MESSAGE */
+        .warm-message-section {
+            background-color: #0A192F;
+            color: #FFFFFF;
+        }
+
+        .warm-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        @media(min-width: 768px) {
+            .warm-container {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        .ceo-photo-wrapper {
+            flex: 1;
+            max-width: 350px;
+            border: 3px solid #B89047;
+            padding: 10px;
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .ceo-info {
+            flex: 2;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 20px;
+            color: #B76E79; /* Rose Gold */
+            margin: 25px 0;
+            border-left: 4px solid #B89047;
+            padding-left: 20px;
+        }
+
+        .ceo-signature {
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 15px;
+        }
+
+        .ceo-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #B89047;
+        }
+
+        .ceo-title {
+            font-size: 14px;
+            color: #CCCCCC;
+        }
+
+        /* VISION & MISSION */
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        @media(min-width: 768px) {
+            .vision-mission-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .vm-box {
+            background-color: #F9F6F0;
+            padding: 40px;
+            border-radius: 4px;
+            border-top: 4px solid #B89047;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .vm-box h3 {
+            font-size: 24px;
+            color: #0A192F;
+            margin-bottom: 20px;
+        }
+
+        .vm-box ul {
+            list-style-position: inside;
+            margin-top: 10px;
+        }
+
+        .vm-box ul li {
+            margin-bottom: 12px;
+            color: #333333;
+        }
+
+        /* CORE TEAM */
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media(min-width: 576px) { .team-grid { grid-template-columns: 1fr 1fr; } }
+        @media(min-width: 992px) { .team-grid { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+
+        .team-card {
+            background-color: #FFFFFF;
+            border: 1px solid #EAE5D9;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #B76E79;
+        }
+
+        .team-card h3 {
+            font-size: 16px;
+            color: #0A192F;
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .team-role {
+            font-size: 13px;
+            color: #B89047;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .team-edu {
+            font-size: 12px;
+            color: #666666;
+            border-top: 1px solid #EEE;
+            padding-top: 8px;
+            margin-top: 8px;
+        }
+
+        /* PACKAGE DEALS */
+        .package-group-title {
+            font-size: 28px;
+            color: #0A192F;
+            margin: 40px 0 20px 0;
+            border-left: 4px solid #B89047;
+            padding-left: 15px;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media(min-width: 768px) {
+            .packages-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media(min-width: 992px) {
+            .packages-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .package-card {
+            background-color: #FFFFFF;
+            border: 1px solid #EAE5D9;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .package-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .package-body {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .package-title {
+            font-size: 20px;
+            color: #0A192F;
+            margin-bottom: 10px;
+        }
+
+        .package-meta {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .package-price {
+            color: #B89047;
+            font-weight: 600;
+        }
+
+        .package-duration {
+            color: #666666;
+            margin-left: 10px;
+        }
+
+        .package-includes {
+            font-size: 13px;
+            color: #444444;
+            margin-top: 10px;
+            flex-grow: 1;
+        }
+
+        .package-includes ul {
+            list-style-type: square;
+            list-style-position: inside;
+            margin-top: 5px;
+        }
+
+        .package-includes ul li {
+            margin-bottom: 4px;
+        }
+
+        .package-cashback {
+            margin-top: 15px;
+            background-color: #F9F6F0;
+            color: #B76E79;
+            padding: 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px dashed #B76E79;
+        }
+
+        /* CUSTOM PACKAGE SPECIAL STYLE */
+        .custom-package-card {
+            border: 2px solid #B89047;
+            background: #0A192F;
+            color: #FFFFFF;
+        }
+
+        .custom-package-card .package-title {
+            color: #B89047;
+        }
+        .custom-package-card .package-duration {
+            color: #DDDDDD;
+        }
+        .custom-package-card .package-includes {
+            color: #EEEEEE;
+        }
+        .custom-package-card .package-cashback {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* SERVICES & WHY CHOOSE */
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media(min-width: 768px) {
+            .details-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media(min-width: 576px) {
+            .services-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .service-item {
+            background: #FFFFFF;
+            padding: 20px;
+            border-left: 3px solid #B76E79;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .service-item h4 {
+            color: #0A192F;
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .service-item p {
+            font-size: 13px;
+            color: #555555;
+        }
+
+        .why-box {
+            background-color: #0A192F;
+            color: #FFFFFF;
+            padding: 30px;
+            border-radius: 4px;
+            height: fit-content;
+        }
+
+        .why-box h3 {
+            color: #B89047;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .why-box ul {
+            list-style: none;
+        }
+
+        .why-box ul li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+        }
+
+        /* BOOKING FORM */
+        .booking-section {
+            background-color: #FFFFFF;
+        }
+
+        .booking-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #F9F6F0;
+            padding: 40px;
+            border-radius: 4px;
+            border: 1px solid #EAE5D9;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #0A192F;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #CCCCCC;
+            background-color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: border 0.3s;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #B89047;
+        }
+
+        .submit-btn {
+            background-color: #0A192F;
+            color: #FFFFFF;
+            border: 2px solid #0A192F;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: transparent;
+            color: #0A192F;
+        }
+
+        /* FOOTER & CONTACTS */
+        footer {
+            background-color: #111111;
+            color: #FFFFFF;
+            padding: 60px 0 30px 0;
+            border-top: 4px solid #B89047;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media(min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .footer-info h3, .footer-contact h3 {
+            font-size: 22px;
+            color: #B89047;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .footer-contact p {
+            margin-bottom: 12px;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-contact span.label {
+            color: #B76E79;
+            font-weight: 500;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .footer-contact a:hover {
+            color: #B89047;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #222222;
+            font-size: 12px;
+            color: #777777;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-area">
+                <!-- LOGO(* dalam bentuk Foto) -->
+                <img src="Logo Verotrip.jpg" alt="Logo Verotrip" class="logo-img">
+                <span class="brand-name">VEROTRIP</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#booking">Book Now</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>VEROTRIP</h1>
+        <p>"Elevate Your Travel Experience"</p>
+    </section>
+
+    <!-- ABOUT US & OUR STORY -->
+    <section class="container about-story-bg" id="about">
+        <div class="about-content">
+            <h2 class="section-title">About Us</h2>
+            <p class="text-p">Verotrip Indonesia merupakan perusahaan travel agent dan tour organizer yang berfokus pada penyediaan layanan perjalanan wisata domestik dan internasional dengan konsep modern, praktis, dan berorientasi pada pengalaman pelanggan.</p>
+            <p class="text-p">Kami percaya bahwa setiap perjalanan memiliki cerita yang berbeda. Oleh karena itu, Verotrip hadir untuk membantu pelanggan merancang perjalanan yang sesuai dengan kebutuhan, anggaran, dan tujuan wisata mereka.</p>
+            <p class="text-p">Dengan dukungan teknologi digital dan sumber daya manusia yang profesional, Verotrip berkomitmen memberikan pengalaman perjalanan yang aman, nyaman, dan berkesan.</p>
+        </div>
+
+        <div class="story-content" style="margin-top: 60px;">
+            <h2 class="section-title">Our Story</h2>
+            <p class="text-p">Verotrip Indonesia lahir dari semangat untuk menghadirkan layanan perjalanan yang lebih mudah diakses oleh semua kalangan.</p>
+            <p class="text-p">Berawal dari kecintaan terhadap dunia pariwisata dan perkembangan teknologi informasi, kami melihat bahwa wisatawan saat ini membutuhkan layanan yang tidak hanya nyaman tetapi juga cepat, transparan, dan terintegrasi secara digital.</p>
+            <p class="text-p">Sejak berdiri pada tahun 2026, Verotrip terus mengembangkan berbagai layanan wisata, mulai dari perjalanan keluarga, study tour, corporate gathering, hingga paket wisata premium.</p>
+            <p class="text-p">Melalui inovasi dan pelayanan yang berorientasi pada pelanggan, Verotrip ingin menjadi sahabat perjalanan yang dapat dipercaya oleh masyarakat Indonesia.</p>
+        </div>
+    </section>
+
+    <!-- WARM MESSAGE (CEO) -->
+    <section class="warm-message-section">
+        <div class="container warm-container">
+            <div class="ceo-photo-wrapper">
+                <!-- *Foto Ceo -->
+                <img src="padlan 1.png" alt="Foto CEO Muhammad Fadhlan">
+            </div>
+            <div class="ceo-info">
+                <h2 class="serif-font" style="font-size: 28px; color: #B89047; margin-bottom: 20px;">Warm Message</h2>
+                <p class="text-p" style="color: #EEEEEE;">Perjalanan bukan sekadar tentang destinasi, tetapi juga tentang pengalaman, cerita, dan kenangan yang tercipta di sepanjang perjalanan. Berangkat dari semangat tersebut, Verotrip Indonesia hadir untuk memberikan layanan perjalanan yang nyaman, aman, dan berkesan bagi setiap pelanggan.</p>
+                <p class="text-p" style="color: #EEEEEE;">Dengan dukungan teknologi dan tim yang profesional, kami berkomitmen menjadi partner perjalanan terpercaya yang siap membantu mewujudkan setiap perjalanan impian Anda.</p>
+                
+                <div class="quote-text">"Travel is the only thing you buy that makes you richer."</div>
+                
+                <p class="text-p" style="color: #EEEEEE;">Kami berharap Verotrip dapat menjadi bagian dari perjalanan berharga yang menghadirkan lebih banyak pengalaman, cerita, dan kebahagiaan bagi setiap pelanggan.</p>
+                <p class="text-p" style="color: #B89047; font-weight: 600; font-size: 18px;">Explore Beyond Expectations.</p>
+                
+                <div class="ceo-signature">
+                    <div class="ceo-name">Muhammad Fadhlan</div>
+                    <div class="ceo-title">Founder & CEO</div>
+                    <div class="ceo-title">Verotrip Indonesia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION & MISSION -->
+    <section class="container">
+        <h2 class="section-title">Our Vission & Misson</h2>
+        <div class="vision-mission-grid">
+            <div class="vm-box">
+                <h3>Visi :</h3>
+                <p class="text-p">Menjadi perusahaan travel agent digital terpercaya yang memberikan pengalaman perjalanan terbaik bagi setiap pelanggan.</p>
+            </div>
+            <div class="vm-box">
+                <h3>Misi :</h3>
+                <ul>
+                    <li>Menyediakan layanan perjalanan yang profesional dan berkualitas.</li>
+                    <li>Mengembangkan inovasi berbasis teknologi informasi dalam industri pariwisata.</li>
+                    <li>Memberikan pelayanan yang cepat, aman, dan transparan.</li>
+                    <li>Menciptakan paket wisata yang unik, menarik, dan berkesan.</li>
+                    <li>Menjalin hubungan jangka panjang dengan pelanggan dan mitra bisnis.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE TEAM -->
+    <section class="container" style="background-color: #FFFFFF; width: 100%; max-width: 100%; padding: 60px 5%;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title">Our Core Team</h2>
+            <div class="team-grid">
+                
+                <!-- Member 1 -->
+                <div class="team-card">
+                    <!-- *Foto -->
+                    <img src="padlan 2.png" alt="Muhammad Fadhlan Belva Arya Arkana" class="team-img">
+                    <h3>Muhammad Fadhlan Belva Arya Arkana</h3>
+                    <div class="team-role">Founder & CEO VEROTRIP</div>
+                    <div class="team-edu">S1 Manajemen<br>Universitas Islam Bandung</div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-card">
+                    <!-- *Foto -->
+                    <img src="ciko 1.png" alt="Chiko Kurniawan Aswan" class="team-img">
+                    <h3>Chiko Kurniawan Aswan</h3>
+                    <div class="team-role">Finance VEROTRIP</div>
+                    <div class="team-edu">S1 Manajemen<br>Universitas Islam Bandung</div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-card">
+                    <!-- *Foto -->
+                    <img src="dika 1.png" alt="Andika Jaya permana" class="team-img">
+                    <h3>Andika Jaya permana</h3>
+                    <div class="team-role">Marketing & Consultant VEROTRIP</div>
+                    <div class="team-edu">S1 Manajemen<br>Universitas Islam Bandung</div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-card">
+                    <!-- *Foto -->
+                    <img src="egi 2.png" alt="Muhammad Resgi Daniswara" class="team-img">
+                    <h3>Muhammad Resgi Daniswara</h3>
+                    <div class="team-role">Operational VEROTRIP</div>
+                    <div class="team-edu">S1 Manajemen<br>Universitas Islam Bandung</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGE DEALS -->
+    <section class="container" id="packages">
+        <h2 class="section-title">Our Package Deals</h2>
+
+        <!-- Group 1: Bandung -->
+        <div class="package-group-title">1. Bandung Adventure Escape</div>
+        <div class="packages-grid">
+            
+            <div class="package-card">
+                <!-- Pangalengan Package (*Foto) -->
+                <img src="panalengan.jpeg" alt="Pangalengan Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Pangalengan Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp525.000/Pax</span><br>
+                        <span class="package-duration">Durasi: One Day Tour</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (termasuk driver, asisten, tol, parkir, dll)</li>
+                            <li>Rafting Situ Cileunca</li>
+                            <li>Kebun Teh Malabar</li>
+                            <li>1x Snack</li>
+                            <li>1x Makan Siang</li>
+                            <li>Tour Guide</li>
+                            <li>Dokumentasi Foto & Video</li>
+                            <li>Banner</li>
+                            <li>ID Card</li>
+                            <li>Air Mineral</li>
+                            <li>P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Trans Studio Bandung Package (*Foto) -->
+                <img src="tsm.jpeg" alt="Trans Studio Bandung Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Trans Studio Bandung Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp625.000/Pax</span><br>
+                        <span class="package-duration">Durasi: One Day Tour</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (termasuk driver, asisten, tol, parkir, dll)</li>
+                            <li>Tiket Trans Studio Bandung</li>
+                            <li>1x Snack</li>
+                            <li>1x Makan Siang</li>
+                            <li>Tour Guide</li>
+                            <li>Dokumentasi Foto & Video</li>
+                            <li>Banner</li>
+                            <li>ID Card</li>
+                            <li>Luggage Tag</li>
+                            <li>Air Mineral</li>
+                            <li>P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Lembang Package (*Foto) -->
+                <img src="lembang.jpeg" alt="Lembang Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Lembang Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp650.000/Pax</span><br>
+                        <span class="package-duration">Durasi: One Day Tour</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Orchid Forest Cikole</li>
+                            <li>The Lodge Maribaya / Floating Market</li>
+                            <li>The Ranch</li>
+                            <li>1x Snack</li>
+                            <li>1x Makan Siang</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Luggage Tag</li>
+                            <li>Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Group 2: Garut -->
+        <div class="package-group-title">2. Garut Escape</div>
+        <div class="packages-grid">
+            
+            <div class="package-card">
+                <!-- Silver Package (*Foto) -->
+                <img src="garut.jpeg" alt="Garut Silver Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Silver Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp475.000/Pax</span><br>
+                        <span class="package-duration">Durasi: One Day Tour</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll) Drajat Pass / Sabda Alam / Sumber Alam</li>
+                            <li>Situ Bagendit</li>
+                            <li>1x Snack</li>
+                            <li>1x Makan Siang</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Gold Package (*Foto) -->
+                <img src="garut 2.jpeg" alt="Garut Gold Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Gold Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp950.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 2 Day 1 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel 1 Malam @Sumber Alam Garut</li>
+                            <li>Team Building & Gathering Drajat Pass / Sabda Alam / Situ Bagendit</li>
+                            <li>1x Snack, 3x Makan</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Group 3: Pangandaran -->
+        <div class="package-group-title">3. Pangandaran Bliss</div>
+        <div class="packages-grid">
+            
+            <div class="package-card">
+                <!-- Bronze Package (*Foto) -->
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=400" alt="Pangandaran Bronze Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Bronze Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp925.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 2 Day 1 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel Laut Biru Pangandaran (1 kamar isi 4 orang)</li>
+                            <li>1x Snack</li>
+                            <li>3x Makan (special dinner @Bamboo Bar)</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Silver Package (*Foto) -->
+                <img src="laut biru.jpeg" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Silver Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp950.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 2 Day 1 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel Laut Biru Pangandaran (1 kamar isi 4 orang)</li>
+                            <li>Pantai Batu Karas</li>
+                            <li>1X Snack</li>
+                            <li>3x Makan (special dinner @Bamboo Bar)</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Gold Package (*Foto) -->
+                <img src="pangandaranm.jpeg" alt="Pangandaran Gold Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Gold Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp1.000.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 2 Day 1 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel Laut Biru Pangandaran (1 kamar isi 4 orang)</li>
+                            <li>Pantai Batu Karas</li>
+                            <li>Body Rafting Citumang</li>
+                            <li>1x Snack</li>
+                            <li>3x Makan (special dinner @Bamboo Bar)</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Group 4: Jakarta -->
+        <div class="package-group-title">4. Jakarta City Escape</div>
+        <div class="packages-grid">
+            
+            <div class="package-card">
+                <!-- Taman Safari Package (*Foto) -->
+                <img src="tamsaf.jpeg" alt="Taman Safari Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Taman Safari Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp550.000/Pax</span><br>
+                        <span class="package-duration">Durasi: One Day Tour</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Tiket masuk Taman Safari Bogor</li>
+                            <li>Free 20+ Permainan</li>
+                            <li>1x Snack, 1x Makan Siang</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Seaworld & Ocean Dream Samudera Package (*Foto) -->
+                <img src="seaworld.jpeg" alt="Seaworld Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Seaworld & Ocean Dream Samudera Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp600.000/Pax</span><br>
+                        <span class="package-duration">Durasi: One Day Tour</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Tiket masuk Ancol</li>
+                            <li>Tiket masuk Seaworld & Ocean Dream</li>
+                            <li>Pantai Indah Kapuk</li>
+                            <li>1x Snack, 1x Makan Siang</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Dufan Package (*Foto) -->
+                <img src="Dufan.jpeg" alt="Dufan Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Dufan Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp625.000/Pax</span><br>
+                        <span class="package-duration">Durasi: One Day Tour</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Tiket masuk Dufan</li>
+                            <li>Ancol</li>
+                            <li>Pantai Indah Kapuk</li>
+                            <li>1x Snack</li>
+                            <li>1x Makan Siang</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Group 5: Yogyakarta -->
+        <div class="package-group-title">5. Yogyakarta Heritage Journey</div>
+        <div class="packages-grid">
+            
+            <div class="package-card">
+                <!-- Bronze Package (*Foto) -->
+                <img src="jogja 1.jpeg" alt="Yogyakarta Bronze Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Bronze Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp1.100.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 3 Day 2 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel *** Yogyakarta (1 kamar isi 3-4)</li>
+                            <li>Candi Prambanan</li>
+                            <li>Pantai Parangtritis</li>
+                            <li>Taman Pintar & Keraton Yogyakarta</li>
+                            <li>6x Makan (sesuai program)</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Luggage Tag Air Mineral & P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Silver Package (*Foto) -->
+                <img src="jogja 2.jpeg" alt="Yogyakarta Silver Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Silver Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp1.150.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 3 Day 2 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel *** Yogyakarta (1 kamar isi 3)</li>
+                            <li>Jeep Parangtritis / Jeep Lava Tour Merapi</li>
+                            <li>Pantai Parangtritis</li>
+                            <li>Taman Pintar</li>
+                            <li>Candi Prambanan</li>
+                            <li>6x Makan (sesuai program)</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Gold Package (*Foto) -->
+                <img src="jogja 3.jpeg" alt="Yogyakarta Gold Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Gold Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp1.200.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 3 Day 2 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel *** Yogyakarta (1 kamar isi 3)</li>
+                            <li>Pantai Gunung Kidul</li>
+                            <li>Jeep Gunung Kidul</li>
+                            <li>River Tubing New Rivermoon Heha Sky View</li>
+                            <li>Taman Pintar</li>
+                            <li>6x Makan (sesuai program)</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Luggage Tag Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Group 6: East Java -->
+        <div class="package-group-title">6. East Java Paradise Trip</div>
+        <div class="packages-grid">
+            
+            <div class="package-card">
+                <!-- Malang Package (*Foto) -->
+                <img src="malang.jpeg" alt="Malang Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Malang Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp2.250.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 5 Day 4 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel *** Malang (1 kamar isi 3)</li>
+                            <li>Museum Angkut</li>
+                            <li>Jatim Park 1/2/3</li>
+                            <li>Taman Selecta Batu</li>
+                            <li>Batu Night Spectacular</li>
+                            <li>Batu Love Garden</li>
+                            <li>10x Makan (sesuai program)</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Malang – Bromo – Yogyakarta Package (*Foto) -->
+                <img src="malang 2.jpeg" alt="Malang Bromo Yogyakarta Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Malang – Bromo – Yogyakarta Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp2.450.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 5 Day 4 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel *** Malang (1 kamar isi 3)</li>
+                            <li>Bromo Tour</li>
+                            <li>Museum Angkut</li>
+                            <li>Jatim Park 1/2/3</li>
+                            <li>Batu Night Spectacular Candi Prambanan</li>
+                            <li>10x Makan (sesuai program)</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Malang – Bromo Package (*Foto) -->
+                <img src="malang 3.jpeg" alt="Malang Bromo Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Malang – Bromo Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp1.200.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 5 Day 4 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel *** Malang (1 kamar isi 3)</li>
+                            <li>Hotel *** Yogyakarta (1 kamar isi 3)</li>
+                            <li>Museum Angkut</li>
+                            <li>Jatim Park 1/2/3</li>
+                            <li>Batu Night Spectacular</li>
+                            <li>Lava Tour Merapi</li>
+                            <li>Pantai Parangtritis</li>
+                            <li>Candi Prambanan</li>
+                            <li>10x Makan (sesuai program) Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Group 7: Dieng -->
+        <div class="package-group-title">7. Dieng Panorama Journey</div>
+        <div class="packages-grid">
+            
+            <div class="package-card">
+                <!-- Silver Package (*Foto) -->
+                <img src="dieng.jpeg" alt="Dieng Silver Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Silver Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp1.550.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 3 Day 2 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Villa / Penginapan Dieng</li>
+                            <li>Tour Dieng (sunrise sikunir, kawah sikidang, candi arjuna, batu ratapan angin, perkebunan teh tambi, telaga menjer, pintu langit, telaga warna, oleh-oleh)</li>
+                            <li>6x Makan (sesuai program)</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Gold Package (*Foto) -->
+                <img src="dieng 2.jpeg" alt="Dieng Gold Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Gold Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp1.200.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 5 Day 4 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel *** Yogyakarta (1 kamar isi 3-4)</li>
+                            <li>Tour Dieng</li>
+                            <li>Lava Tour Merapi</li>
+                            <li>Candi Prambanan</li>
+                            <li>6x Makan (sesuai program)</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Luggage Tag Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Group 8: Bali -->
+        <div class="package-group-title">8. Bali Island Experience</div>
+        <div class="packages-grid">
+            
+            <div class="package-card">
+                <!-- Bronze Package (*Foto) -->
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=400" alt="Bali Bronze Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Bronze Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp2.550.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 6 Day 5 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel *** Bali (1 kamar isi 3-4)</li>
+                            <li>Kapal Ferry PP Ketapang Gilimanuk</li>
+                            <li>Pura Ulun Danu Beratan Tanah Lot</li>
+                            <li>Pantai Melasti</li>
+                            <li>Pantai Pandawa</li>
+                            <li>Tanjung Benoa</li>
+                            <li>Desa Penglipuran</li>
+                            <li>Pantai Jimbaran (Special Dinner)</li>
+                            <li>Garuda Wisnu Kencana Malioboro Yogyakarta</li>
+                            <li>15x Makan (sesuai program)</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Silver Package (*Foto) -->
+                <img src="bali 2.jpeg" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Silver Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp2.800.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 6 Day 5 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel *** Bali (1 kamar isi 3-4)</li>
+                            <li>Kapal Ferry PP Ketapang Gilimanuk</li>
+                            <li>Pura Ulun Danu Beratan Tanah Lot</li>
+                            <li>Pantai Melasti</li>
+                            <li>Pantai Pandawa</li>
+                            <li>Tanjung Benoa</li>
+                            <li>Garuda Wisnu Kencana Pantai Jimbaran (Special Dinner)</li>
+                            <li>Desa Penglipuran</li>
+                            <li>Malioboro Yogyakarta</li>
+                            <li>Lava Tour Merapi</li>
+                            <li>15x Makan (sesuai program) Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback">Benefit Cashback</div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <!-- Gold Package (*Foto) -->
+                <img src="https://images.unsplash.com/photo-1501179691627-eeaa65ea017c?auto=format&fit=crop&q=80&w=400" alt="Bali Gold Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Gold Package</h3>
+                    <div class="package-meta">
+                        <span class="package-price">Start From Rp3.200.000/Pax</span><br>
+                        <span class="package-duration">Durasi: 6 Day 5 Night</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong>Includes:</strong>
+                        <ul>
+                            <li>Transportasi (incl. driver, asisten, tol, parkir, dll)</li>
+                            <li>Hotel *** Bali (1 kamar isi 3-4)</li>
+                            <li>Hotel *** Yogyakarta (1 kamar isi 3-4)</li>
+                            <li>Kapal Ferry PP Ketapang Gilimanuk</li>
+                            <li>Pura Ulun Danu Beratan Tanah Lot</li>
+                            <li>Pantai Melasti, Pandawa Tanjung Benoa</li>
+                            <li>Tari Kecak GWK / Kecak Uluwatu</li>
+                            <li>Desa Penglipuran</li>
+                            <li>Pantai Jimbaran (Special Dinner)</li>
+                            <li>Bromo Tour</li>
+                            <li>Candi Prambanan</li>
+                            <li>Malioboro Yogyakarta</li>
+                            <li>16x Makan (sesuai program)</li>
+                            <li>Tour Guide & Dokumentasi Foto Video</li>
+                            <li>Banner, Id Card, Air Mineral, P3K</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Custom Package Experience -->
+        <div class="package-group-title">CUSTOM PACKAGE EXPERIENCE (*Foto)</div>
+        <div style="max-width: 400px; margin: 0 auto;">
+            <div class="package-card custom-package-card">
+                <!-- Create Your Own Journey (*Foto) -->
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=400" alt="Custom Package" class="package-img">
+                <div class="package-body">
+                    <h3 class="package-title">Create Your Own Journey</h3>
+                    <div class="package-meta">
+                        <span class="package-price" style="color: #B89047;">Start From Rp. 350RB/Pax</span><br>
+                        <span class="package-duration">Flexible Duration (One Day Tour / Multi Day Tour)</span>
+                    </div>
+                    <div class="package-includes">
+                        <strong style="color: #B89047;">INCLUDES</strong>
+                        <ul>
+                            <li>Konsultasi Destinasi & Perjalanan</li>
+                            <li>Penyusunan Itinerary Sesuai Kebutuhan</li>
+                            <li>Transportasi Pariwisata (opsional)</li>
+                            <li>Reservasi Hotel & Penginapan (opsional)</li>
+                            <li>Tiket Masuk Destinasi Wisata</li>
+                            <li>Tour Leader Profesional</li>
+                            <li>Dokumentasi Foto & Video</li>
+                            <li>Banner Perjalanan</li>
+                            <li>ID Card Peserta</li>
+                            <li>Air Mineral</li>
+                            <li>P3K</li>
+                            <li>Customer Support 24/7</li>
+                        </ul>
+                    </div>
+                    <div class="package-cashback" style="color: #B89047; border-color: #B89047;">Benefit Cashback</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VEROTRIP DETAILS & WHY CHOOSE -->
+    <section class="container" id="services" style="background-color: #FFFFFF; width: 100%; max-width: 100%; padding: 60px 5%;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title">Verotrip Details</h2>
+            
+            <div class="details-grid">
+                <div>
+                    <h3 class="serif-font" style="font-size: 24px; color: #0A192F; margin-bottom: 20px;">Our Services</h3>
+                    <div class="services-list">
+                        
+                        <div class="service-item">
+                            <h4>1. Penyusunan Penawaran & Konsultasi Jasa Wisata</h4>
+                            <p>-Konsultasi kebutuhan perjalanan (destinasi, durasi, aktivitas).<br>-Penyusunan itinerary sesuai permintaan klien.<br>-Penawaran harga transparan & fleksibel.</p>
+                        </div>
+
+                        <div class="service-item">
+                            <h4>2.Professional Tour Guide</h4>
+                            <p>-Pemandu wisata berpengalaman.<br>-Mengelola jadwal, koordinasi, dan pengarahan peserta.<br>-Penjelasan destinasi, sejarah, budaya, serta local insight.</p>
+                        </div>
+
+                        <div class="service-item">
+                            <h4>3.Pembuatan Guide Book Perjalanan</h4>
+                            <p>-Buku panduan khusus rute perjalanan.<br>-Berisi jadwal harian, lokasi wisata, tips perjalanan, maps, dan list perlengkapan.<br>-Format digital (PDF) atau cetak.</p>
+                        </div>
+
+                        <div class="service-item">
+                            <h4>4.Pembuatan Logo Perjalanan</h4>
+                            <p>-Desain logo custom sesuai tema trip/company.<br>-Format siap cetak (PNG, PDF, SVG).<br>-Bisa digunakan untuk kaos, ID card, banner, merchandise, dll.</p>
+                        </div>
+
+                        <div class="service-item">
+                            <h4>5.Dokumentasi Foto & Video</h4>
+                            <p>-Dokumentasi oleh tim profesional.<br>-Hasil RAW / non-edit & hasil edit profesional.<br>-Highlight video perjalanan.<br>-File diserahkan melalui Google Drive.</p>
+                        </div>
+
+                        <div class="service-item">
+                            <h4>6.List Nomor Telepon Darurat & Penting</h4>
+                            <p>-Kontak RS terdekat, klinik, polisi, pemadam, dan keluarga darurat.<br>-Kontak PIC hotel, driver, dan tour leader.<br>-Diberikan dalam bentuk print & digital.</p>
+                        </div>
+
+                        <div class="service-item">
+                            <h4>7.P3K Umum</h4>
+                            <p>-Kotak P3K dasar untuk kebutuhan ringan.<br>-Berisi plaster, antiseptik, kasa, obat merah, minyak angin, dan kebutuhan dasar lainnya.<br>-Dibawa oleh tour leader selama perjalanan.</p>
+                        </div>
+
+                        <div class="service-item">
+                            <h4>8.Merchandise Perjalanan</h4>
+                            <p>-ID card peserta.<br>-Banner & Sticker untuk Kendaraan.<br>-Banner & backdrop kecil untuk foto.</p>
+                        </div>
+
+                        <div class="service-item">
+                            <h4>9.Customer Support 24/7</h4>
+                            <p>-Grup WhatsApp peserta + admin.<br>-Bantuan darurat & penyesuaian mendadak selama perjalanan.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="why-box">
+                        <h3>Why Choose Verotrip??</h3>
+                        <ul>
+                            <li>✔ Professional Tour Leader</li>
+                            <li>✔ Digital Booking System</li>
+                            <li>✔ Flexible Itinerary</li>
+                            <li>✔ Affordable Price</li>
+                            <li>✔ Documentation Included</li>
+                            <li>✔ Customer Support 24/7</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING ORDER PAGE/FORM -->
+    <section class="container" id="booking">
+        <h2 class="section-title">Request Booking Order</h2>
+        <div class="booking-form">
+            <form action="mailto:verotripindonesia@gmail.com" method="GET" enctype="text/plain">
+                <input type="hidden" name="subject" value="New Booking Order - Verotrip Website">
+                
+                <div class="form-group">
+                    <label for="name">Nama Pemesan</label>
+                    <input type="text" id="name" name="Nama Pemesan" required placeholder="Masukkan nama lengkap Anda">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Alamat</label>
+                    <input type="text" id="address" name="Alamat" required placeholder="Masukkan alamat lengkap Anda">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">No. Telepon / WhatsApp</label>
+                    <input type="tel" id="phone" name="No Telepon" required placeholder="Contoh: 081220813587">
+                </div>
+
+                <div class="form-group">
+                    <label for="pax">Jumlah Pax (Peserta)</label>
+                    <input type="number" id="pax" name="Jumlah Pax" required placeholder="Jumlah peserta trip" min="1">
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Destinasi Pilihan / Paket Service</label>
+                    <select id="destination" name="Destinasi Wisata Pilihan" required>
+                        <option value="">-- Pilih Destinasi / Paket --</option>
+                        <option value="Bandung Adventure Escape - Pangalengan">Bandung Adventure Escape - Pangalengan</option>
+                        <option value="Bandung Adventure Escape - Trans Studio">Bandung Adventure Escape - Trans Studio</option>
+                        <option value="Bandung Adventure Escape - Lembang">Bandung Adventure Escape - Lembang</option>
+                        <option value="Garut Escape - Silver Package">Garut Escape - Silver Package</option>
+                        <option value="Garut Escape - Gold Package">Garut Escape - Gold Package</option>
+                        <option value="Pangandaran Bliss - Bronze Package">Pangandaran Bliss - Bronze Package</option>
+                        <option value="Pangandaran Bliss - Silver Package">Pangandaran Bliss - Silver Package</option>
+                        <option value="Pangandaran Bliss - Gold Package">Pangandaran Bliss - Gold Package</option>
+                        <option value="Jakarta City Escape - Taman Safari">Jakarta City Escape - Taman Safari</option>
+                        <option value="Jakarta City Escape - Seaworld & Ocean Dream">Jakarta City Escape - Seaworld & Ocean Dream</option>
+                        <option value="Jakarta City Escape - Dufan">Jakarta City Escape - Dufan</option>
+                        <option value="Yogyakarta Heritage Journey - Bronze Package">Yogyakarta Heritage Journey - Bronze Package</option>
+                        <option value="Yogyakarta Heritage Journey - Silver Package">Yogyakarta Heritage Journey - Silver Package</option>
+                        <option value="Yogyakarta Heritage Journey - Gold Package">Yogyakarta Heritage Journey - Gold Package</option>
+                        <option value="East Java Paradise Trip - Malang Package">East Java Paradise Trip - Malang Package</option>
+                        <option value="East Java Paradise Trip - Malang Bromo Yogyakarta">East Java Paradise Trip - Malang Bromo Yogyakarta</option>
+                        <option value="East Java Paradise Trip - Malang Bromo">East Java Paradise Trip - Malang Bromo</option>
+                        <option value="Dieng Panorama Journey - Silver Package">Dieng Panorama Journey - Silver Package</option>
+                        <option value="Dieng Panorama Journey - Gold Package">Dieng Panorama Journey - Gold Package</option>
+                        <option value="Bali Island Experience - Bronze Package">Bali Island Experience - Bronze Package</option>
+                        <option value="Bali Island Experience - Silver Package">Bali Island Experience - Silver Package</option>
+                        <option value="Bali Island Experience - Gold Package">Bali Island Experience - Gold Package</option>
+                        <option value="Custom Package - Create Your Own Journey">Custom Package - Create Your Own Journey</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Catatan Tambahan (Tanggal Trip, Durasi, dll)</label>
+                    <textarea id="notes" name="Catatan Tambahan" rows="4" placeholder="Tulis rincian atau permintaan khusus Anda di sini..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Kirim Request Via Email</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER & CONTACTS -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>VEROTRIP</h3>
+                <p style="color: #AAAAAA; font-size: 14px;">"Elevate Your Travel Experience"</p>
+                <p style="color: #888888; font-size: 13px; margin-top: 15px;">Partner perjalanan digital terpercaya Anda untuk mewujudkan setiap momen penjelajahan yang berharga, aman, dan berkesan.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Our Contacts</h3>
+                
+                <p>
+                    <span class="label">Instagram:</span>
+                    <a href="https://www.instagram.com/verotrip.id" target="_blank">@verotrip.id</a>
+                </p>
+                
+                <p>
+                    <span class="label">Tiktok:</span>
+                    <a href="https://www.tiktok.com/@Verotrip.id" target="_blank">@Verotrip.id</a>
+                </p>
+                
+                <p>
+                    <span class="label">Head Office:</span>
+                    <span style="color: #DDDDDD;">Bandung City, West Java, Indonesia 45314</span>
+                </p>
+                
+                <p>
+                    <span class="label">Hotline:</span>
+                    <a href="https://wa.me/6281220813587" target="_blank">+62 812 2081 3587</a>
+                </p>
+                
+                <p>
+                    <span class="label">Email:</span>
+                    <a href="mailto:verotripindonesia@gmail.com">verotripindonesia@gmail.com</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 VEROTRIP Indonesia. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
